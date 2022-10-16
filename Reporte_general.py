@@ -333,14 +333,14 @@ for registro in resultado:
             'C4', 'ESTADO DE TRANSACCIONES PROCESADAS ', bold5)
 
         worksheet.write(
-            'B35:D35', 'En caso de identificar alguna diferencia o descuadre, favor contactar a MiRed a los numeros 809 530 3995, que con gusto le atenderemos.', bold6)
+            'B35:D35', 'En caso de identificar alguna diferencia o descuadre, favor contactar a ### a los numeros ####, que con gusto le atenderemos.', bold6)
         worksheet.write(
             'B36:D36', ' Este mensaje contiene información legalmente considerada confidencial y privilegiada, con la intención de que sea utilizada', bold6)
         worksheet.write(
             'B37:D37', ' exclusivamente por las personas u organizaciones a quienes está dirigido. De haber recibido este mensaje por error, debes eliminarlo e', bold6)
         worksheet.write(
             'B38:D38', 'informarnos de inmediato al número indicado más arriba.', bold6)
-        worksheet.write_url('C39:C39', 'www.mired.com.do', bold7)
+        worksheet.write_url('C39:C39', 'www.###.com.do', bold7)
 
         # worksheet1.set_column('A2:I',1,header_format2)
 
@@ -416,7 +416,7 @@ for registro in resultado:
                 print(correito)
                 print(archivito)
 
-                email_sender = 'notificaciones@mired.com.do'
+                email_sender = 'notificaciones@###.com.do'
                 email_recipient = correito
 
                 msg = MIMEMultipart()
@@ -444,7 +444,7 @@ for registro in resultado:
                     server = smtplib.SMTP('smtp.office365.com', 587)
                     server.ehlo()
                     server.starttls()
-                    server.login('notificaciones@mired.com.do',
+                    server.login('notificaciones@###.com.do',
                                  '123456789NOT@')
                     text = msg.as_string()
                     server.sendmail(email_sender, email_recipient, text)
